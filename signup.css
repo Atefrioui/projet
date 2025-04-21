@@ -1,0 +1,243 @@
+/* CSS الخاص بصفحة التسجيل */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --text-dark: #0d1b2a;
+    --text-light: #6b7280;
+    --border-color: #e5e7eb;
+    --light-bg: #f5f7fa;
+    --success: #16a34a;
+    --error: #dc2626;
+    --warning: #d97706;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body.signup-page {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .signup-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+  }
+  
+  .signup-brand {
+    background: var(--primary);
+    color: white;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .signup-brand .logo-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .signup-brand h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .signup-brand p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+  }
+  
+  .signup-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .signup-form h2 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .input-group label {
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .input-group input {
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .input-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .password-strength {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+    align-items: center;
+  }
+  
+  .strength-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+  }
+  
+  .strength-text {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-left: 10px;
+  }
+  
+  .terms-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  .terms-group a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .terms-group a:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .signup-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .login-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 15px;
+  }
+  
+  .login-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* تنبيهات */
+  .signup-alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .signup-alert.error {
+    background-color: #fee2e2;
+    color: var(--error);
+    border: 1px solid #fca5a5;
+  }
+  
+  .signup-alert.success {
+    background-color: #dcfce7;
+    color: var(--success);
+    border: 1px solid #86efac;
+  }
+  
+  .signup-alert.fade-out {
+    animation: fadeOut 0.3s ease;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  @media (max-width: 480px) {
+    .signup-container {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    
+    body.signup-page {
+      padding: 0;
+      background: white;
+    }
+  }

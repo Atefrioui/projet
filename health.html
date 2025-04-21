@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPlatform - Health Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="health.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="top-bar">
+        <div class="platform-name">
+            <i class="fas fa-heartbeat"></i> MyPlatform - Health
+        </div>
+        <nav class="nav-links">
+            <a href="mainpage.html"><i class="fas fa-home"></i> Home</a>
+            <a href="login.html" class="auth-btn login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="auth-btn signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Health & Wellness</h1>
+            <p>Find doctors, book appointments, and manage your health</p>
+        </div>
+    </section>
+    
+    <!-- Search Section -->
+    <main class="container">
+        <section class="search-box">
+            <h2>Find Healthcare Services</h2>
+            <form class="search-form" id="health-search-form">
+                <select id="service-type">
+                    <option value="">All Services</option>
+                    <option value="doctor">Doctors</option>
+                    <option value="clinic">Clinics</option>
+                    <option value="hospital">Hospitals</option>
+                    <option value="pharmacy">Pharmacies</option>
+                    <option value="lab">Labs</option>
+                </select>
+                
+                <select id="specialty">
+                    <option value="">All Specialties</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="orthopedics">Orthopedics</option>
+                    <option value="dentistry">Dentistry</option>
+                </select>
+                
+                <input type="text" id="location" placeholder="City or Area">
+                
+                <button type="submit">Search Services</button>
+            </form>
+        </section>
+        
+        <!-- Categories Section -->
+        <section class="categories-section">
+            <h2>Health Services</h2>
+            <div class="categories-grid" id="categories-container">
+                <div class="category-card" data-service="doctor">
+                    <div class="category-icon"><i class="fas fa-user-md"></i></div>
+                    <h3>Doctors</h3>
+                </div>
+                <div class="category-card" data-service="clinic">
+                    <div class="category-icon"><i class="fas fa-clinic-medical"></i></div>
+                    <h3>Clinics</h3>
+                </div>
+                <div class="category-card" data-service="hospital">
+                    <div class="category-icon"><i class="fas fa-hospital"></i></div>
+                    <h3>Hospitals</h3>
+                </div>
+                <div class="category-card" data-service="pharmacy">
+                    <div class="category-icon"><i class="fas fa-prescription-bottle-alt"></i></div>
+                    <h3>Pharmacies</h3>
+                </div>
+                <div class="category-card" data-service="lab">
+                    <div class="category-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Labs</h3>
+                </div>
+                <div class="category-card" data-service="emergency">
+                    <div class="category-icon"><i class="fas fa-ambulance"></i></div>
+                    <h3>Emergency</h3>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section class="services-section">
+            <h2>Available Health Services</h2>
+            <div class="services-grid" id="services-container">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 MyPlatform. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="health.js"></script>
+</body>
+</html>

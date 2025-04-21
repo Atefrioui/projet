@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPlatform - Travel Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="top-bar">
+        <div class="platform-name">
+            <i class="fas fa-plane"></i> MyPlatform - Travel
+        </div>
+        <nav class="nav-links">
+            <a href="mainpage.html"><i class="fas fa-home"></i> Home</a>
+            <a href="login.html" class="auth-btn login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+            <a href="signup.html" class="auth-btn signup-btn"><i class="fas fa-user-plus"></i> Sign Up</a>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Book flights, hotels, and tours with ease</p>
+        </div>
+    </section>
+    
+    <!-- Search Section -->
+    <main class="container">
+        <section class="search-box">
+            <h2>Find Your Perfect Trip</h2>
+            <form class="search-form" id="travel-search-form">
+                <select id="trip-type">
+                    <option value="">Trip Type</option>
+                    <option value="flight">Flights</option>
+                    <option value="hotel">Hotels</option>
+                    <option value="tour">Tours</option>
+                    <option value="package">Vacation Packages</option>
+                </select>
+                
+                <input type="text" id="destination" placeholder="Destination">
+                
+                <input type="date" id="checkin-date" placeholder="Check-in Date">
+                
+                <input type="date" id="checkout-date" placeholder="Check-out Date">
+                
+                <select id="travelers">
+                    <option value="">Number of Travelers</option>
+                    <option value="1">1 Traveler</option>
+                    <option value="2">2 Travelers</option>
+                    <option value="3-5">3-5 Travelers</option>
+                    <option value="6+">6+ Travelers</option>
+                </select>
+                
+                <button type="submit">Search Now</button>
+            </form>
+        </section>
+         <!-- Travel Categories -->
+         <section class="categories-section">
+            <h2>Travel Services</h2>
+            <div class="categories-grid" id="categories-container">
+                <div class="category-card" data-category="flight">
+                    <div class="category-icon"><i class="fas fa-plane"></i></div>
+                    <h3>Flights</h3>
+                </div>
+                <div class="category-card" data-category="hotel">
+                    <div class="category-icon"><i class="fas fa-hotel"></i></div>
+                    <h3>Hotels</h3>
+                </div>
+                <div class="category-card" data-category="tour">
+                    <div class="category-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>Tours</h3>
+                </div>
+                <div class="category-card" data-category="car">
+                    <div class="category-icon"><i class="fas fa-car"></i></div>
+                    <h3>Car Rentals</h3>
+                </div>
+                <div class="category-card" data-category="cruise">
+                    <div class="category-icon"><i class="fas fa-ship"></i></div>
+                    <h3>Cruises</h3>
+                </div>
+                <div class="category-card" data-category="package">
+                    <div class="category-icon"><i class="fas fa-suitcase-rolling"></i></div>
+                    <h3>Packages</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Destinations Section -->
+        <section class="destinations-section">
+            <h2>Popular Destinations</h2>
+            <div class="destinations-grid" id="destinations-container">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </section>
+        
+       
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2025 MyPlatform. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="travel.js"></script>
+</body>
+</html>
